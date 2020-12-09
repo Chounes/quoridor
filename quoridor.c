@@ -1,7 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #define BUFSIZE 1024
+
+struct player{
+  char name;
+  int nb_wall;
+  struct position pos;
+};
+
+struct position{
+  int x;
+  int y;
+};
+
+struct case{
+  struct position pos;
+  bool wall;
+  bool palyer;
+};
 
 int main() {
   setbuf(stdout, NULL);
